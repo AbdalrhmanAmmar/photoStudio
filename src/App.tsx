@@ -1,25 +1,25 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Products from './pages/products';
-import ProductDetails from './pages/products/ProductDetails';
-import Cart from './pages/Cart';
-import Payment from './pages/Payment';
-import VisaPayment from './pages/payment/VisaPayment';
-import PaypalPayment from './pages/payment/PaypalPayment';
-import Profile from './pages/Profile';
-import ServiceDetails from './pages/ServiceDetails';
-import Login from './pages/auth/Login';
-import Signup from './pages/auth/Signup';
-import AdminDashboard from './pages/admin/Dashboard';
-import OrderDetails from './pages/OrderDetails';
-import { useThemeStore } from './store/themeStore';
-import { getLanguageDir } from './i18n';
-import ProtectedRoute from './components/ProtectedRoute';
-import AdminRoute from './components/AdminRoute';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Products from "./pages/products";
+import ProductDetails from "./pages/products/ProductDetails";
+import Cart from "./pages/Cart";
+import Payment from "./pages/Payment";
+import VisaPayment from "./pages/payment/VisaPayment";
+import PaypalPayment from "./pages/payment/PaypalPayment";
+import Profile from "./pages/Profile";
+import ServiceDetails from "./pages/ServiceDetails";
+import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/Signup";
+import AdminDashboard from "./pages/admin/Dashboard";
+import OrderDetails from "./pages/OrderDetails";
+import { useThemeStore } from "./store/themeStore";
+import { getLanguageDir } from "./i18n";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
 
 function App() {
   const { i18n } = useTranslation();
@@ -27,7 +27,7 @@ function App() {
   const dir = getLanguageDir(i18n.language);
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`} dir={dir}>
+    <div className={`min-h-screen ${isDarkMode ? "dark" : ""}`} dir={dir}>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <BrowserRouter>
           <Navbar />
